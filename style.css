@@ -60,6 +60,34 @@
   }
 }
 
+@keyframes move {
+  from {
+    transform: translateX(30px);
+  }
+  to {
+    transform: translateX(-90px);
+  }
+}
+
+@keyframes packman-top {
+  from {
+    transform: rotate(270deg);
+  }
+  to {
+    transform: rotate(319deg);
+  }
+}
+
+@keyframes packman-bottom {
+  from {
+    transform: rotate(210deg);
+  }
+  to {
+    transform: rotate(141deg);
+  }
+}
+
+
 .body {
   width: 100vw;
   height: 100vh;
@@ -239,6 +267,57 @@
   flex-wrap: wrap;
   width: 70px;
 }
+
+
+.packman {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100px;
+}
+
+.halfcircle {
+width: 0;
+height: 0;
+border-top: 30px solid aliceblue;
+border-right: 30px solid aliceblue;
+border-bottom: 30px solid transparent;
+border-left: 30px solid transparent;
+border-radius: 30px;
+}
+
+.packman-top {
+  position: absolute;
+  left: -20px;
+  animation: packman-top .5s ease infinite;
+}
+
+.packman-bottom {
+  position: absolute;
+  left: -20px;
+  animation: packman-bottom .5s ease infinite;
+}
+
+.move-1 {
+  position: absolute;
+  right: 0;
+  animation: move 1s linear infinite;
+}
+
+.move-2 {
+  position: absolute;
+  right: 0;
+  animation: move 1s .5s linear infinite;
+}
+
+.move-3 {
+  position: absolute;
+  right: 0;
+  animation: move 1s 1s linear infinite;
+}
+
+
+
 
 
 
